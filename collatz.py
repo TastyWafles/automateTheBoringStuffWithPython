@@ -9,5 +9,8 @@ def collatz(number):
         collatz(number * 3 + 1)
 
 print('Enter Number:')
-number = int(input())
-collatz(number)
+try:
+    number = int(input())
+    collatz(number)
+except ValueError:
+    print('Non-integer value')
